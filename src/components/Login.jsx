@@ -20,7 +20,7 @@ export const Login = () => {
 		});
   };
   
-  const makecheck=()=>{
+  const check=()=>{
      axios.get(`http://localhost:8080/users?username=${user.username}`)
 			.then(function (response) {
 				// handle success
@@ -61,7 +61,7 @@ export const Login = () => {
 			/>
 			{/* On this button click make network req to find user with same username and password */}
 			{/* get his role, if role is `admin` take him to `/orders` page otherwise take him to `/neworder` */}
-			<button className="submit" onClick={makecheck}>
+			<button className="submit" onClick={check}>
 				Login
 			</button>
 		</div>
